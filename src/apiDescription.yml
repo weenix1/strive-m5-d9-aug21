@@ -1,0 +1,112 @@
+openapi: 3.0.1
+info:
+  title: Strive-Books
+  version: '1'
+  description: All the endpoints dedicated to books
+paths:
+  /books:
+    summary: Endpoints for operations on books
+    get:
+      summary: Retrieve all the booksssssssssssssssssss
+      description: ''
+      operationId: ''
+      responses:
+        '200':
+          description: Ok response
+          content:
+            application/json:
+              examples:
+                Ok response:
+                  value: |-
+                    {
+                    }        
+        '400':
+          description: Default error sample response
+          content:
+            application/json:
+              examples:
+                Ok response:
+                  value: |-
+                    {
+                    }        
+      tags:
+        - books
+    post:
+      summary: Creates a new book
+      description: ''
+      operationId: ''
+      responses:
+        default:
+          description: Default error sample response
+      tags:
+        - books
+  /books/{bookId}:
+    get:
+      summary: Get a book by ID
+      parameters:
+        - in: path
+          name: bookId
+          schema:
+            type: integer
+          required: true
+          description: Numeric ID of the book to get
+      responses:
+        '200':
+          description: Ok response
+          content:
+            application/json:
+              examples:
+                Ok response:
+                  value: |-
+                    {
+                    }        
+        '400':
+          description: Default error sample response
+          content:
+            application/json:
+              examples:
+                Ok response:
+                  value: |-
+                    {
+                    }             
+      tags:
+        - books
+    put:
+      summary: ''
+      parameters:
+        - in: path
+          name: bookId
+          schema:
+            type: integer
+          required: true
+          description: Numeric ID of the book to get      
+      description: ''
+      operationId: ''
+      responses:
+        default:
+          description: Default error sample response
+      tags:
+        - books
+    delete:
+      summary: ''
+      parameters:
+        - in: path
+          name: bookId
+          schema:
+            type: integer
+          required: true
+          description: Numeric ID of the book to get      
+      description: ''
+      operationId: ''
+      responses:
+        default:
+          description: Default error sample response
+      tags:
+        - books        
+servers:
+  - url: http://localhost:3001
+    variables: {}
+    description: Local Server
+  - url: https://myremoteserver.herokuapp.com
+    variables: {}
+    description: Remote sever
